@@ -1,0 +1,153 @@
+/* Reset + Body Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Orbitron', sans-serif;
+  height: 100%;
+  background: #000;
+  color: white;
+}
+
+/* Navbar */
+.navbar {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+  color: #00e676;
+}
+
+/* Video Background */
+.video-background {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  object-fit: cover;
+  opacity: 0.7;
+}
+
+/* Video Overlay */
+.video-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+.video-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.video-overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.video-overlay button {
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  background-color: #00e676;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.video-overlay button:hover {
+  background-color: #00c853;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  padding: 20px 40px;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+footer .socials a img {
+  width: 24px;
+  margin: 0 10px;
+  filter: brightness(0) invert(1);
+  transition: 0.3s ease;
+}
+
+footer .socials a img:hover {
+  filter: brightness(0) invert(0.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .video-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .video-overlay p {
+    font-size: 1rem;
+  }
+
+  .navbar .nav-links {
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    display: none;
+  }
+
+  .navbar .nav-links.active {
+    display: flex;
+  }
+}
