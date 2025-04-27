@@ -1,0 +1,298 @@
+/* Navbar Styles */
+.navbar {
+    background-color: #0a0a23;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 217, 255, 0.2);
+    position: relative;
+    top: -100px; /* Start position, navbar is above the screen */
+    animation: navbarSlideIn 1s ease-out forwards; /* Slide-In animation */
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.navbar .logo h1 {
+    font-size: 28px;
+    color: #00d9ff;
+    font-weight: bold;
+    opacity: 0;
+    animation: slideInLogo 1s 0.3s forwards; /* Logo slide-in */
+}
+
+.navbar .logo a {
+    text-decoration: none;
+    color: #00d9ff;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    opacity: 0;
+    animation: slideInLinks 1s 0.5s forwards; /* Links slide-in */
+}
+
+.nav-links ul li {
+    position: relative;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: #f0f0f0;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+/* Hover and Active State */
+.nav-links ul li a:hover,
+.nav-links ul li a.active {
+    color: #00d9ff;
+}
+
+.nav-links ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background-color: #00d9ff;
+    transition: width 0.3s ease;
+}
+
+.nav-links ul li a:hover::after {
+    width: 100%;
+}
+
+/* Animation Keyframes */
+
+/* Slide-In effect for navbar */
+@keyframes navbarSlideIn {
+    0% { top: -100px; opacity: 0; } /* Start position above the screen */
+    100% { top: 0; opacity: 1; } /* End position at normal position */
+}
+
+/* Slide-In effect for logo */
+@keyframes slideInLogo {
+    0% { transform: translateY(-30px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Slide-In effect for nav links */
+@keyframes slideInLinks {
+    0% { transform: translateY(-30px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* General Animation for Page Load */
+.contact-section {
+    padding: 80px 0;
+    background-color: #0a0a23;
+    color: #f0f0f0;
+    min-height: 100vh;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards; /* Fade-In effect */
+}
+
+.contact-section .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.contact-section h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #00d9ff;
+    opacity: 0;
+    animation: slideIn 1s 0.5s forwards; /* Slide-In effect */
+}
+
+.contact-section p {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: #bbb;
+    opacity: 0;
+    animation: slideIn 1s 0.7s forwards; /* Slide-In effect */
+}
+
+/* Contact Form Animation */
+.contact-form {
+    background: #1a1a3d;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 217, 255, 0.2);
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: slideUp 1s 1s forwards; /* Slide-Up effect */
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background: rgb(15, 15, 43);
+    border: 1px solid #00d9ff;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    opacity: 0;
+    animation: fadeInUp 1s 1.3s forwards; /* Input fields fade-in */
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #888;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Button Hover Animation */
+.btn {
+    background-color: #00d9ff;
+    color: #0a0a23;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Add transform for pulse effect */
+}
+
+.btn:hover {
+    background-color: #00aacc;
+    transform: scale(1.1); /* Slightly enlarge button on hover */
+    animation: pulse 1s infinite; /* Pulse effect */
+}
+
+/* Contact Info Section Animation */
+.contact-info {
+    background: #1a1a3d;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 217, 255, 0.2);
+    opacity: 0;
+    animation: slideUp 1s 1.5s forwards; /* Slide-Up effect */
+}
+
+.contact-info h3 {
+    margin-bottom: 15px;
+    color: #00d9ff;
+}
+
+.contact-info p {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+/* Keyframe Animations */
+
+/* Fade In Page */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Slide-In (Top to Bottom) */
+@keyframes slideIn {
+    0% { transform: translateY(-30px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Slide-Up (Bottom to Top) */
+@keyframes slideUp {
+    0% { transform: translateY(30px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Fade-In Up for Input Fields */
+@keyframes fadeInUp {
+    0% { transform: translateY(10px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Button Pulse Effect */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-form,
+    .contact-info {
+        padding: 20px;
+    }
+
+    .contact-section h2 {
+        font-size: 28px;
+    }
+}
+/* Footer Styles */
+.footer {
+    background-color: #0a0a23;
+    color: #f0f0f0;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.footer .footer-container p {
+    margin: 0;
+    font-size: 14px;
+    color: #bbb;
+}
+
+.footer .footer-links {
+    margin-top: 10px;
+}
+
+.footer .footer-links a {
+    text-decoration: none;
+    color: #00d9ff;
+    margin: 0 10px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer .footer-links a:hover {
+    color: #fff;
+}

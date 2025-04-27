@@ -4,9 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VirtuGear – Shop the Future</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/index.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <!-- JavaScript for Visitor Counter -->
+  <script src="js/script.js"></script>
 </head>
 <body>
 
@@ -39,47 +41,23 @@
     <p>You are visitor number: <span id="count">0</span></p>
   </div>
 
-  <!-- 🌐 Footer -->
-  <footer>
-    <p>&copy; 2025 VirtuGear. All rights reserved.</p>
+  <!-- Footer Container -->
+  <div id="footer-container"></div> <!-- This is where the footer will be dynamically inserted -->
 
-    <!-- Quick Links -->
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </div>
+  <script>
+    // Function to load the footer content dynamically
+    function loadFooter() {
+      fetch('footer.html')  // Path to your footer.html file
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-container').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading footer:', error));
+    }
 
-    <!-- Newsletter Signup -->
-    <div class="newsletter">
-      <p>Subscribe for updates and exclusive offers:</p>
-      <input type="email" placeholder="Enter your email" />
-      <button>Subscribe</button>
-    </div>
-
-    <!-- Contact Info -->
-    <div class="contact-info">
-      <p>Email: support@virtugear.com</p>
-      <p>Phone: +233-203-1646-616</p>
-    </div>
-
-    <!-- Social Icons -->
-    <div class="socials">
-      <a href="https://facebook.com/your-facebook-profile" title="Facebook" target="_blank">
-        <img src="images/facebook.png" alt="Follow us on Facebook">
-      </a>
-      <a href="https://twitter.com/kwaku_appiadu" title="Twitter" target="_blank">
-        <img src="images/twitter.png" alt="Follow us on Twitter">
-      </a>
-      <a href="https://instagram.com/_appiadu" title="Instagram" target="_blank">
-        <img src="images/instagram.png" alt="Follow us on Instagram">
-      </a>
-    </div>
-  </footer>
-
-  <!-- JavaScript for Visitor Counter -->
-  <script src="js/script.js"></script>
+    // Load the footer when the page is loaded
+    window.onload = loadFooter;
+  </script>
 
 </body>
 </html>

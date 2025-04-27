@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VirtuGear - VR Accessories</title>
+    <link rel="stylesheet" href="CSS/product.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>VirtuGear</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Product Listings -->
+    <main>
+        <section class="products">
+            <h2>Explore Our VR Accessories</h2>
+            <div class="product-grid">
+                <!-- Example Product -->
+                <div class="product-card">
+                    <img src="assets/images/vr-headset.jpg" alt="VR Headset">
+                    <h3>Meta Quest VR Headset</h3>
+                    <p>$299.99</p>
+                    <a href="product-detail.html" class="btn">View Details</a>
+                </div>
+                <!-- Repeat for other products -->
+                <div class="product-card">
+                    <img src="assets/images/vr-controller.jpg" alt="VR Controller">
+                    <h3>VR Motion Controller</h3>
+                    <p>$79.99</p>
+                    <a href="product-detail.html" class="btn">View Details</a>
+                </div>
+                <!-- Add more products here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Container -->
+    <div id="footer-container"></div> <!-- This is where the footer will be dynamically inserted -->
+
+    <script>
+        // Function to load the footer content dynamically
+        function loadFooter() {
+            fetch('footer.html')  // Path to your footer.html file
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-container').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading footer:', error));
+        }
+
+        // Load the footer when the page is loaded
+        window.onload = loadFooter;
+    </script>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

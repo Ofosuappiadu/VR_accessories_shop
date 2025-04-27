@@ -1,0 +1,151 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa; /* lighter background */
+}
+
+/* Header (Navbar) Styles */
+header {
+    background-color: #0d6efd; /* Bright Blue Navbar */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #dbe9ff; /* Lighter on hover */
+    text-decoration: underline;
+}
+
+/* Products Section */
+.products {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 16px;
+    color: #0d6efd;
+}
+
+/* Button Styles */
+.product-card .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745; /* Green Add to Cart button */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.product-card .btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #001f3f; /* Dark Navy Footer */
+    color: #fff;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 14px;
+}
+
+footer .footer-links a {
+    color: #ffffff;
+    margin: 0 12px;
+    text-decoration: none;
+}
+
+footer .footer-links a:hover {
+    text-decoration: underline;
+    color: #66a3ff;
+}
+
+footer .newsletter input[type="email"] {
+    padding: 8px;
+    margin: 10px 0;
+    width: 220px;
+    border-radius: 4px;
+    border: none;
+}
+
+footer .newsletter button {
+    padding: 8px 20px;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+footer .newsletter button:hover {
+    background-color: #0056b3;
+}
+
+footer .socials a img {
+    width: 30px;
+    margin: 0 8px;
+}
+
+footer .contact-info p {
+    margin: 5px 0;
+}
+
+footer .footer-links, .newsletter, .contact-info, .socials {
+    margin-top: 12px;
+}

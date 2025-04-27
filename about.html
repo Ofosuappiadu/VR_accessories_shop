@@ -3,9 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>About Us - VirtuGear</title>
+    <link rel="stylesheet" href="CSS/about.css">
 </head>
 <body>
-    
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="index.html">VirtuGear</a></h1>
+            </div>
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Us Section -->
+    <main>
+        <section class="about-section">
+            <div class="about-content">
+                <h2>About VirtuGear</h2>
+                <p>Welcome to <strong>VirtuGear</strong> – your ultimate destination for top-tier Virtual Reality (VR) accessories!</p>
+
+                <p>At VirtuGear, we believe in pushing the boundaries of reality. Our mission is to empower VR enthusiasts, gamers, and explorers with the most immersive experiences possible. From premium VR headsets to advanced motion controllers, we offer everything you need to step deeper into new worlds.</p>
+
+                <p>Founded in 2025 by tech enthusiasts, our store was built on a simple idea: everyone deserves access to the future of entertainment, education, and connection. With cutting-edge products, unbeatable customer service, and a passion for innovation, we’re here to gear you up for tomorrow.</p>
+
+                <p>Join us as we redefine what’s possible — one virtual adventure at a time.</p>
+            </div>
+
+            <div class="about-image">
+                <img src="images/about-vr.jpg" alt="Virtual Reality Experience">
+            </div>
+        </section>
+
+        <!-- Optional: Our Values Section -->
+        <section class="values-section">
+            <h2>Our Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <h3>Innovation</h3>
+                    <p>We stay ahead of trends, offering the latest VR technologies and gear.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Customer First</h3>
+                    <p>Your satisfaction is at the heart of everything we do.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Quality</h3>
+                    <p>Every product is carefully curated and tested for an amazing experience.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <div id="footer-container"></div>
+
+    <script>
+        // Fetch the footer HTML file and insert it into the footer section
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error fetching footer:', error));
+    </script>
 </body>
 </html>
