@@ -5,23 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VirtuGear – Shop the Future</title>
   <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
-  <!-- JavaScript for Visitor Counter -->
+  <link rel="stylesheet" href="CSS/footer.css">
   <script src="js/script.js"></script>
 </head>
 <body>
 
-  <!-- 🔝 Navigation -->
-  <nav class="navbar">
-    <div class="logo">VirtuGear</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="products.html">Products</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <!-- 🔝 Modern Navbar -->
+  <div class="navbar">
+    <div class="container">
+      <div class="logo">
+        <h1><a href="index.html">VirtuGear</a></h1>
+      </div>
+      <div class="nav-links">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
   <!-- 🎬 Video Background -->
   <div class="video-background">
@@ -42,12 +50,11 @@
   </div>
 
   <!-- Footer Container -->
-  <div id="footer-container"></div> <!-- This is where the footer will be dynamically inserted -->
+  <div id="footer-container"></div>
 
   <script>
-    // Function to load the footer content dynamically
     function loadFooter() {
-      fetch('footer.html')  // Path to your footer.html file
+      fetch('footer.html')
         .then(response => response.text())
         .then(data => {
           document.getElementById('footer-container').innerHTML = data;
@@ -55,7 +62,6 @@
         .catch(error => console.error('Error loading footer:', error));
     }
 
-    // Load the footer when the page is loaded
     window.onload = loadFooter;
   </script>
 

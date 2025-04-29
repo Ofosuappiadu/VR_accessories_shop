@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>VirtuGear - VR Accessories</title>
-    <link rel="stylesheet" href="CSS/product.css">
+    <link rel="stylesheet" href="CSS/navbar.css">
+    <link rel="stylesheet" href="CSS/product.css"> <!-- Optional: If you have product styles -->
+    <link rel="stylesheet" href="css/footer.css"> <!-- ✅ Footer styling -->
+
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <div class="logo">
-            <h1>VirtuGear</h1>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="index.html">VirtuGear</a></h1>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="cart.html">Cart</a></li>
-            </ul>
-        </nav>
-    </header>
+    </div>
 
     <!-- Product Listings -->
     <main>
@@ -35,25 +40,24 @@
                     <p>$299.99</p>
                     <a href="product-detail.html" class="btn">View Details</a>
                 </div>
-                <!-- Repeat for other products -->
+
+                <!-- Another Product -->
                 <div class="product-card">
                     <img src="assets/images/vr-controller.jpg" alt="VR Controller">
                     <h3>VR Motion Controller</h3>
                     <p>$79.99</p>
                     <a href="product-detail.html" class="btn">View Details</a>
                 </div>
-                <!-- Add more products here -->
             </div>
         </section>
     </main>
 
     <!-- Footer Container -->
-    <div id="footer-container"></div> <!-- This is where the footer will be dynamically inserted -->
+    <div id="footer-container"></div>
 
     <script>
-        // Function to load the footer content dynamically
         function loadFooter() {
-            fetch('footer.html')  // Path to your footer.html file
+            fetch('footer.html')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('footer-container').innerHTML = data;
@@ -61,7 +65,6 @@
                 .catch(error => console.error('Error loading footer:', error));
         }
 
-        // Load the footer when the page is loaded
         window.onload = loadFooter;
     </script>
 
